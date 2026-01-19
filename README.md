@@ -4,7 +4,7 @@
 
 I'm a **real problem solver** who leverages the newest tools — including AI — to ship fast and build things that work. Whether it's making Ruby 5-6x faster with SIMD, building autonomous AI agents, or architecting fintech systems, I focus on **outcomes over hype**.
 
-I use AI to code in any language, specialize in Ruby gems with native C extensions, and have deep expertise in **DevOps** and **Linux systems**. Experienced in **leading engineering teams** and shipping products end-to-end.
+I use AI to code in any language, specialize in Ruby gems with native C extensions, and have deep expertise in **DevOps**, **bare metal Linux**, and **cloud infrastructure**. Experienced in **leading engineering teams** and shipping products end-to-end.
 
 ---
 
@@ -36,6 +36,11 @@ I use AI to code in any language, specialize in Ruby gems with native C extensio
 | [**ruby2html**](https://github.com/sebyx07/ruby2html) | Write Rails views in pure Ruby — no ERB, no HAML |
 | [**better_structure_sql**](https://github.com/sebyx07/better_structure_sql) | Clean, readable schema dumps for Rails |
 | [**yyson-ruby**](https://github.com/sebyx07/yyson-ruby) | Ultra-fast JSON parser powered by yyjson C library |
+| [**ruby-binary-search**](https://github.com/sebyx07/ruby-binary-search) | Binary Search with Red Black Trees |
+| [**s3-light**](https://github.com/sebyx07/s3-light) | Lightweight S3 client for Ruby |
+| [**native_ruby**](https://github.com/sebyx07/native_ruby) | Ruby Standard Lib in pure Ruby (YJIT optimized) |
+| [**ruby2sass**](https://github.com/sebyx07/ruby2sass) | Write SASS/SCSS in pure Ruby |
+| [**rspec-github-actions-summary**](https://github.com/sebyx07/rspec-github-actions-summary) | RSpec formatter for GitHub Actions Summary |
 
 ### ⚙️ Systems & Low-Level
 
@@ -44,6 +49,8 @@ I use AI to code in any language, specialize in Ruby gems with native C extensio
 | [**meshara**](https://github.com/sebyx07/meshara) | Decentralized P2P library in Rust — encryption, mesh networking, censorship resistance |
 | [**json-asm**](https://github.com/sebyx07/json-asm) | Hand-optimized x86-64 & ARM64 assembly JSON parser with AVX-512/NEON SIMD |
 | [**deskd**](https://github.com/sebyx07/deskd) | Desktop daemon built in Rust |
+| [**rust-ratatui-todos**](https://github.com/sebyx07/rust-ratatui-todos) | High-performance TUI + CLI + REST API in Rust with Ratatui & Axum |
+| [**stats-lite**](https://github.com/sebyx07/stats-lite) | Linux server stats — CPU, RAM, HDD monitoring |
 
 ### 🎨 Frontend & Design
 
@@ -51,6 +58,16 @@ I use AI to code in any language, specialize in Ruby gems with native C extensio
 |---------|-------------|
 | [**cybercore-css**](https://github.com/sebyx07/cybercore-css) | Pure CSS cyberpunk framework with neon aesthetics — zero dependencies |
 | [**cybercore-charts**](https://github.com/sebyx07/cybercore-charts) | Zero-dependency SVG chart library |
+
+### 🎮 Game Dev & Modding
+
+| Project | Description |
+|---------|-------------|
+| [**stormlib-node**](https://github.com/sebyx07/stormlib-node) | Node.js bindings for StormLib — Blizzard MPQ archives |
+| [**stormlib**](https://github.com/sebyx07/stormlib) | Ruby MPQ library using StormLib |
+| [**wow-dbcfile-node**](https://github.com/sebyx07/wow-dbcfile-node) | High-performance Node.js package for WoW DBC files |
+| [**wow_dbc**](https://github.com/sebyx07/wow_dbc) | Ruby gem for WoW DBC files |
+| [**rails-on-azerothcore**](https://github.com/sebyx07/rails-on-azerothcore) | Rails integration with AzerothCore WoW server |
 
 ---
 
@@ -71,7 +88,7 @@ I use AI to code in any language, specialize in Ruby gems with native C extensio
 - Scaled React frontends to hundreds of pages
 - GraphQL APIs with metaprogramming
 - Database optimization, deadlock reduction, API performance
-- AWS/Linux infrastructure, CI/CD pipelines, Docker orchestration
+- Bare metal Linux, AWS, CI/CD pipelines, Docker/K8s orchestration
 
 ---
 
@@ -89,7 +106,7 @@ I use AI to code in any language, specialize in Ruby gems with native C extensio
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![Assembly](https://img.shields.io/badge/Assembly-654FF0?style=flat&logoColor=white)
 
-**Frameworks & Infrastructure**
+**Frameworks & Databases**
 
 ![Rails](https://img.shields.io/badge/Rails-CC0000?style=flat&logo=rubyonrails&logoColor=white)
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
@@ -102,6 +119,8 @@ I use AI to code in any language, specialize in Ruby gems with native C extensio
 **DevOps & Infrastructure**
 
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
+![Debian](https://img.shields.io/badge/Debian-A81D33?style=flat&logo=debian&logoColor=white)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonwebservices&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
@@ -110,7 +129,7 @@ I use AI to code in any language, specialize in Ruby gems with native C extensio
 
 **Specializations**
 
-`AI-Assisted Development` · `Ruby Gems & C Extensions` · `Performance Engineering` · `SIMD Optimization` · `DevOps & Linux` · `System Architecture` · `Team Leadership`
+`AI-Assisted Development` · `Ruby Gems & C Extensions` · `Performance Engineering` · `SIMD Optimization` · `Bare Metal Linux` · `System Architecture` · `Team Leadership`
 
 ---
 
