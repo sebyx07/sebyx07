@@ -26,6 +26,8 @@ I use AI to code in any language, specialize in Ruby gems with native C extensio
 |---------|-------------|
 | [**claude-task-master**](https://github.com/sebyx07/claude-task-master) | Autonomous task orchestration that keeps Claude working until a goal is achieved. Published on PyPI. |
 | [**c-ai-optimizer**](https://github.com/sebyx07/c-ai-optimizer) | AI-powered C code optimizer — 2.3× performance gains through SIMD vectorization |
+| [**ptd.dev**](https://github.com/ai-ptd-dev/ptd.dev) | Polyglot Transpilation Development — write in Ruby/Python/Node, transpile to high-performance Rust |
+| [**wasd-lang**](https://github.com/ai-wasd-lang/wasd-lang) | WASD programming language — explicit semantics, zero-cost abstractions, memory safety. Compiles to native via LLVM. |
 
 ### 💎 High-Performance Ruby Gems
 
