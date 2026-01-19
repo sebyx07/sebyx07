@@ -1,6 +1,6 @@
-# Hey there 👋
+# Lead Software Engineer & Technical Founder
 
-**Lead Software Engineer & Technical Founder** with 15+ years building production systems at scale.
+**15+ years** building production systems at scale.
 
 I'm a **real problem solver** who leverages the newest tools — including AI — to ship fast and build things that work. Whether it's making Ruby 5-6x faster with SIMD, building autonomous AI agents, or architecting fintech systems, I focus on **outcomes over hype**.
 
@@ -63,8 +63,8 @@ I use AI to code in any language, specialize in Ruby gems with native C extensio
 | [Procore Technologies](https://procore.com) | Lead Software Engineer | Construction Tech |
 | [Toronto Star / Torstar](https://torstar.com) | Lead Software Engineer | Media |
 | [ScoutIQ](https://scoutiq.co) | Lead Software Engineer | E-commerce |
-| Skupos Inc | Lead Software Engineer | B2B Inventory |
-| Crewmeister | Full-stack Developer | HR Tech |
+| [Skupos](https://skupos.com) | Lead Software Engineer | B2B Inventory |
+| [Crewmeister](https://crewmeister.com) | Full-stack Developer | HR Tech |
 
 **Highlights:**
 - Rails upgrades across major codebases (5.2 → 7.0)
