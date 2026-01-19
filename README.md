@@ -82,7 +82,7 @@ I use AI to code in any language, specialize in Ruby gems with native C extensio
 | [ScoutIQ](https://scoutiq.co) | Lead Software Engineer | E-commerce |
 | [Skupos](https://skupos.com) | Lead Software Engineer | B2B Inventory |
 | [Crewmeister](https://crewmeister.com) | Full-stack Developer | HR Tech |
-| [HiScore](https://hiscore.ro) | Junior Developer | Software Agency |
+| [HiScore](https://hiscore.ro) | CEO & Founder | Software Agency |
 
 **Highlights:**
 - Rails upgrades across major codebases (5.2 → 7.0)
