@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sebastian Buza · Lead Software Engineer & Technical Founder</title>
+<style>
+  :root {
+    --ink: #1a1c20;
+    --body: #41454d;
+    --muted: #767b86;
+    --faint: #9aa0ab;
+    --line: #e8eaed;
+    --line-soft: #f1f2f4;
+    --accent: #2563eb;
+    --bg: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--body);
+    line-height: 1.55;
+    font-size: 13.5px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page { max-width: 860px; margin: 0 auto; padding: 56px 56px 48px; }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ---------- Header ---------- */
+  header { padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+  .head-top { display: flex; align-items: center; gap: 20px; }
+  .avatar {
+    width: 84px; height: 84px; border-radius: 50%; flex-shrink: 0;
+    object-fit: cover; border: 1px solid var(--line);
+    box-shadow: 0 2px 10px rgba(20,30,60,0.08);
+  }
+  .head-top .who { min-width: 0; }
+  h1 {
+    font-size: 32px; font-weight: 700; color: var(--ink);
+    letter-spacing: -0.6px; line-height: 1.1;
+  }
+  .role { font-size: 15px; font-weight: 500; color: var(--accent); margin-top: 4px; }
+  .tagline { margin-top: 14px; max-width: 660px; color: var(--body); font-size: 13.5px; }
+  .tagline strong { color: var(--ink); font-weight: 600; }
+
+  .contacts { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 12.5px; }
+  .contacts span, .contacts a { color: var(--muted); display: inline-flex; align-items: center; gap: 6px; }
+  .contacts a { color: var(--body); }
+  .contacts .k { color: var(--faint); font-weight: 600; }
+
+  /* Capabilities */
+  .caps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .cap { padding: 13px 14px; border-right: 1px solid var(--line-soft); }
+  .cap:last-child { border-right: none; }
+  .cap .ct { font-size: 12.5px; font-weight: 700; color: var(--ink); }
+  .cap .cs { font-size: 11px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+
+  /* ---------- Sections ---------- */
+  section { margin-top: 30px; }
+  .sec-head {
+    font-size: 11px; font-weight: 700; letter-spacing: 1.6px;
+    text-transform: uppercase; color: var(--faint);
+    padding-bottom: 10px; margin-bottom: 16px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  /* Currently building */
+  .building { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .build .co { font-size: 14px; font-weight: 700; color: var(--ink); }
+  .build .ro { font-size: 12px; color: var(--accent); margin-top: 2px; font-weight: 500; }
+  .build .de { font-size: 12px; color: var(--muted); margin-top: 5px; }
+
+  /* Project groups */
+  .proj-group { margin-bottom: 20px; }
+  .proj-group:last-child { margin-bottom: 0; }
+  .gname {
+    font-size: 12px; font-weight: 700; color: var(--ink);
+    margin-bottom: 11px; letter-spacing: .2px;
+  }
+  .gname a { color: inherit; }
+  .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px 26px; }
+  .proj .pt {
+    font-size: 13px; display: flex; align-items: baseline;
+    justify-content: space-between; gap: 8px;
+  }
+  .proj .pt .name { font-weight: 600; color: var(--ink); }
+  .proj .pt .name a { color: var(--ink); }
+  .proj .pt .name a:hover { color: var(--accent); }
+  .proj .star { font-size: 11px; color: var(--faint); white-space: nowrap; font-weight: 500; }
+  .proj .pd { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .proj .pd .t { color: var(--faint); font-weight: 500; }
+
+  /* Experience */
+  .xp { display: flex; align-items: baseline; gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--line-soft); }
+  .xp:last-child { border-bottom: none; }
+  .xp .cmp { font-size: 13.5px; font-weight: 600; color: var(--ink); min-width: 190px; }
+  .xp .cmp a { color: var(--ink); }
+  .xp .cmp a:hover { color: var(--accent); }
+  .xp .rl { font-size: 12.5px; color: var(--body); flex: 1; }
+  .xp .dm { font-size: 11.5px; color: var(--faint); white-space: nowrap; }
+
+  .highlights { margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 5px 28px; }
+  .highlights li { list-style: none; font-size: 12.5px; color: var(--muted); padding-left: 15px; position: relative; }
+  .highlights li::before { content: "–"; position: absolute; left: 0; color: var(--accent); }
+  .highlights li strong { color: var(--ink); font-weight: 600; }
+
+  /* Stack */
+  .stack-row { margin-bottom: 14px; }
+  .stack-row:last-child { margin-bottom: 0; }
+  .label { font-size: 11px; font-weight: 700; letter-spacing: .5px; color: var(--muted); margin-bottom: 7px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    font-size: 11.5px; padding: 3px 10px; border-radius: 5px;
+    border: 1px solid var(--line); color: var(--body); background: #fafbfc;
+  }
+  .chip.hot { border-color: #d6e0fb; color: var(--accent); background: #f3f7ff; font-weight: 500; }
+
+  footer {
+    margin-top: 34px; padding-top: 16px; border-top: 1px solid var(--line);
+    text-align: center; font-size: 12px; color: var(--faint);
+  }
+
+  /* ---------- Print ---------- */
+  @page { size: A4; margin: 14mm; }
+  @media print {
+    body { font-size: 11px; }
+    .page { padding: 0; max-width: 100%; }
+    section { margin-top: 20px; break-inside: avoid; }
+    .proj-group, .xp { break-inside: avoid; }
+    h1 { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="head-top">
+      <img class="avatar" src="data:image/jpeg;base64,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" alt="Sebastian Buza">
+      <div class="who">
+        <h1>Sebastian Buza</h1>
+        <div class="role">Lead Software Engineer &amp; Technical Founder</div>
+      </div>
+    </div>
+    <p class="tagline">
+      <strong>15+ years</strong> building production systems at scale — <strong>full-stack across
+      frontend, mobile, backend, infrastructure, and AI orchestration</strong>. A real problem solver who
+      leverages the newest tools — including AI — to ship fast and build things that work. From making
+      <strong>Ruby 5–6× faster with SIMD</strong> to architecting fintech platforms and autonomous AI
+      agents — <strong>outcomes over hype</strong>.
+    </p>
+    <div class="contacts">
+      <a href="https://github.com/sebyx07"><span class="k">GitHub</span> github.com/sebyx07</a>
+      <a href="mailto:gore.sebyx@yahoo.com"><span class="k">Email</span> gore.sebyx@yahoo.com</a>
+      <a href="https://venom.is"><span class="k">Venom</span> venom.is</a>
+      <a href="https://developerz.ai"><span class="k">Developerz</span> developerz.ai</a>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-head">Capabilities — Full-Stack, End to End</div>
+    <div class="caps">
+      <div class="cap">
+        <div class="ct">Frontend</div>
+        <div class="cs">React · Ember · GraphQL · pure-CSS design systems</div>
+      </div>
+      <div class="cap">
+        <div class="ct">Mobile</div>
+        <div class="cs">Native iOS &amp; Android · Kotlin multiplatform</div>
+      </div>
+      <div class="cap">
+        <div class="ct">Backend</div>
+        <div class="cs">Rails · Phoenix · high-perf Ruby gems &amp; C extensions</div>
+      </div>
+      <div class="cap">
+        <div class="ct">Infrastructure</div>
+        <div class="cs">Bare metal Linux · k3s/K8s · ArgoCD GitOps · AWS</div>
+      </div>
+      <div class="cap">
+        <div class="ct">AI &amp; Orchestration</div>
+        <div class="cs">Autonomous agents · MCP gateways · Claude pipelines</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">Currently Building</div>
+    <div class="building">
+      <div class="build">
+        <div class="co"><a href="https://tesote.com">Tesote</a></div>
+        <div class="ro">Lead Software Engineer</div>
+        <div class="de">Fintech platform — architecture, scale &amp; performance.</div>
+      </div>
+      <div class="build">
+        <div class="co"><a href="https://venom.is">Venom</a></div>
+        <div class="ro">CEO &amp; Founder</div>
+        <div class="de">Tech consulting &amp; products, delivered end-to-end.</div>
+      </div>
+      <div class="build">
+        <div class="co"><a href="https://developerz.ai">Developerz.ai</a></div>
+        <div class="ro">CEO &amp; Founder</div>
+        <div class="de">AI-powered development orchestration.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">Featured Projects</div>
+
+    <div class="proj-group">
+      <div class="gname"><a href="https://tesote.com">Tesote</a> — Fintech Platform (Current)</div>
+      <div class="proj-grid">
+        <div class="proj">
+          <div class="pt"><span class="name">treasury</span></div>
+          <div class="pd">Enterprise fintech platform for banking integration &amp; real-time operations. <span class="t">Ruby</span></div>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="name">bank-integrations</span></div>
+          <div class="pd">Per-bank scrapers with runtime AI recovery agents. <span class="t">Bun · TypeScript</span></div>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="name">bank-ai-developer</span></div>
+          <div class="pd">Autonomous AI agent that fetches &amp; fixes bank-integration issues. <span class="t">Ruby · Agents</span></div>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="name">ai-dev</span></div>
+          <div class="pd">AI agent orchestration — a Rails mastermind assigning coding agents. <span class="t">Ruby</span></div>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="name">infrastructure</span></div>
+          <div class="pd">AI-first DevOps — k3s on OVH, ArgoCD GitOps. <span class="t">Kubernetes</span></div>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="name">tesote-scraping-browser</span></div>
+          <div class="pd">Chromium fork tuned for scraping at scale. <span class="t">C++</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-group">
+      <div class="gname">AI &amp; Automation</div>
+      <div class="proj-grid">
+        <div class="proj">
+          <div class="pt"><span class="name"><a href="https://github.com/sebyx07/c-ai-optimizer">c-ai-optimizer</a></span></div>
+          <div class="pd">AI-powered C optimizer — 2.3× gains through SIMD vectorization. <span class="t">C · LLM</span></div>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="name"><a href="https://github.com/ai-ptd-dev/ptd.dev">ptd.dev</a></span></div>
+          <div class="pd">Polyglot transpilation — write Ruby/Python/Node, ship high-performance Rust. <span class="t">Rust</span></div>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="name"><a href="https://github.com/ai-wasd-lang/wasd-lang">wasd-lang</a></span></div>
+          <div class="pd">Language with explicit semantics &amp; zero-cost abstractions. Compiles via LLVM. <span class="t">LLVM</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-group">
+      <div class="gname"><a href="https://github.com/developerz-ai">developerz-ai</a> — Org I Build &amp; Ship In</div>
+      <div class="proj-grid">
+        <div class="proj">
+          <div class="pt"><span class="name"><a href="https://github.com/developerz-ai/claude-task-master">claude-task-master</a></span><span class="star">★ 4</span></div>
+          <div class="pd">Autonomous task orchestration that keeps Claude working until a goal is met. <span class="t">Python · on PyPI</span></div>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="name"><a href="https://github.com/developerz-ai/developerz.ai">developerz.ai</a></span></div>
+          <div class="pd">GitHub App that maintains OSS repos — thin orchestrator, BYOK inference. <span class="t">TypeScript</span></div>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="name"><a href="https://github.com/developerz-ai/wurk">wurk</a></span></div>
+          <div class="pd">Drop-in Sidekiq + Pro + Enterprise replacement. 100% API-compatible. <span class="t">Ruby</span></div>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="name"><a href="https://github.com/developerz-ai/db-mcp-gateway">db-mcp-gateway</a></span></div>
+          <div class="pd">Self-hosted MCP gateway — audited, SSO-gated, read-only DB access for agents. <span class="t">Rust</span></div>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="name"><a href="https://github.com/developerz-ai/infrastructure">infrastructure</a></span></div>
+          <div class="pd">AI-first infra — k3s HA · Headscale VPN · ArgoCD GitOps. <span class="t">Kubernetes</span></div>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="name"><a href="https://github.com/developerz-ai/nexus-engine">nexus-engine</a></span></div>
+          <div class="pd">Open-source, AI-first cross-platform game engine — built by AI. <span class="t">TypeScript</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-group">
+      <div class="gname">High-Performance Ruby Gems</div>
+      <div class="proj-grid">
+        <div class="proj">
+          <div class="pt"><span class="name"><a href="https://github.com/sebyx07/zsv-ruby">zsv-ruby</a></span><span class="star">★ 16</span></div>
+          <div class="pd">SIMD-accelerated CSV parser — 5–6× faster than Ruby's stdlib. <span class="t">C ext</span></div>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="name"><a href="https://github.com/sebyx07/ruby2html">ruby2html</a></span><span class="star">★ 24</span></div>
+          <div class="pd">Write Rails views in pure Ruby — no ERB, no HAML. <span class="t">Ruby</span></div>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="name"><a href="https://github.com/sebyx07/fast_cuid2">fast_cuid2</a></span><span class="star">★ 12</span></div>
+          <div class="pd">Fast CUID2 generator with a hand-tuned C extension. <span class="t">C ext</span></div>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="name"><a href="https://github.com/sebyx07/better_structure_sql">better_structure_sql</a></span><span class="star">★ 10</span></div>
+          <div class="pd">Clean, readable schema dumps for Rails (PG/MySQL/SQLite). <span class="t">Ruby</span></div>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="name"><a href="https://github.com/sebyx07/ruby-binary-search">ruby-binary-search</a></span><span class="star">★ 14</span></div>
+          <div class="pd">Binary search with Red-Black Trees. <span class="t">Algorithms</span></div>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="name"><a href="https://github.com/sebyx07/native_ruby">native_ruby</a></span><span class="star">★ 8</span></div>
+          <div class="pd">Ruby standard lib in pure Ruby — YJIT optimized. <span class="t">YJIT</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-group">
+      <div class="gname">Systems, Low-Level &amp; Frontend</div>
+      <div class="proj-grid">
+        <div class="proj">
+          <div class="pt"><span class="name"><a href="https://github.com/sebyx07/meshara">meshara</a></span></div>
+          <div class="pd">Decentralized P2P library in Rust — encryption, mesh, censorship resistance. <span class="t">Rust</span></div>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="name"><a href="https://github.com/sebyx07/json-asm">json-asm</a></span></div>
+          <div class="pd">Hand-written x86-64 &amp; ARM64 assembly JSON parser, AVX-512/NEON. <span class="t">Assembly</span></div>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="name"><a href="https://github.com/sebyx07/cybercore-css">cybercore-css</a></span><span class="star">★ 45</span></div>
+          <div class="pd">Pure-CSS cyberpunk framework with neon aesthetics — zero deps. <span class="t">CSS</span></div>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="name"><a href="https://github.com/sebyx07/stats-lite">stats-lite</a></span><span class="star">★ 9</span></div>
+          <div class="pd">Linux server stats — CPU, RAM, HDD monitoring. Extendable. <span class="t">Ruby</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">Experience</div>
+    <div class="xp"><span class="cmp"><a href="https://procore.com">Procore Technologies</a></span><span class="rl">Lead Software Engineer</span><span class="dm">Construction Tech</span></div>
+    <div class="xp"><span class="cmp"><a href="https://torstar.com">Toronto Star / Torstar</a></span><span class="rl">Lead Software Engineer</span><span class="dm">Media</span></div>
+    <div class="xp"><span class="cmp"><a href="https://scoutiq.co">ScoutIQ</a></span><span class="rl">Lead Software Engineer</span><span class="dm">E-commerce</span></div>
+    <div class="xp"><span class="cmp"><a href="https://skupos.com">Skupos</a></span><span class="rl">Lead Software Engineer</span><span class="dm">B2B Inventory</span></div>
+    <div class="xp"><span class="cmp"><a href="https://crewmeister.com">Crewmeister</a></span><span class="rl">Full-stack Developer</span><span class="dm">HR Tech</span></div>
+    <div class="xp"><span class="cmp"><a href="https://hiscore.ro">HiScore</a></span><span class="rl">Junior Developer</span><span class="dm">Software Agency</span></div>
+
+    <ul class="highlights">
+      <li><strong>Rails upgrades</strong> across major codebases (5.2 → 7.0)</li>
+      <li>Scaled <strong>React</strong> frontends to hundreds of pages</li>
+      <li><strong>GraphQL</strong> APIs with metaprogramming</li>
+      <li>DB optimization, <strong>deadlock reduction</strong>, API perf</li>
+      <li>Bare metal Linux, AWS, CI/CD pipelines</li>
+      <li><strong>Docker / K8s</strong> orchestration</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">Tech Stack</div>
+    <div class="stack-row">
+      <div class="label">Languages</div>
+      <div class="chips">
+        <span class="chip hot">Ruby</span><span class="chip hot">Rust</span><span class="chip">C</span>
+        <span class="chip">C++</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span>
+        <span class="chip">Go</span><span class="chip">Python</span>
+      </div>
+    </div>
+    <div class="stack-row">
+      <div class="label">Frameworks &amp; Data</div>
+      <div class="chips">
+        <span class="chip">Rails</span><span class="chip">React</span><span class="chip">Ember.js</span>
+        <span class="chip">GraphQL</span><span class="chip">PostgreSQL</span><span class="chip">MongoDB</span><span class="chip">Redis</span>
+      </div>
+    </div>
+    <div class="stack-row">
+      <div class="label">DevOps &amp; Infrastructure</div>
+      <div class="chips">
+        <span class="chip">Linux</span><span class="chip">Debian</span><span class="chip">Ubuntu</span>
+        <span class="chip">AWS</span><span class="chip">Docker</span><span class="chip">Kubernetes</span>
+        <span class="chip">Nginx</span><span class="chip">GitHub Actions</span>
+      </div>
+    </div>
+    <div class="stack-row">
+      <div class="label">Specializations</div>
+      <div class="chips">
+        <span class="chip hot">AI-Assisted Development</span><span class="chip hot">Ruby Gems &amp; C Extensions</span>
+        <span class="chip">Performance Engineering</span><span class="chip">SIMD Optimization</span>
+        <span class="chip">Bare Metal Linux</span><span class="chip">System Architecture</span><span class="chip">Team Leadership</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>Building fast software, solving real problems, shipping products.</footer>
+
+</div>
+</body>
+</html>
